@@ -1,0 +1,36 @@
+export const REVEAL_SELECTOR = [
+  ".cover-inner > *",
+  ".s-body article",
+  ".thanks-lead",
+  ".thanks-bottom > div",
+  ".ctx-photo",
+  ".stat",
+  ".ctx-copy",
+  ".source",
+  ".thesis",
+  ".obj-banner",
+  ".contrib",
+  ".step",
+  ".data-foot",
+  ".score-lead",
+  ".vars span",
+  ".score-bottom > *",
+  ".ch-note",
+  ".scheme-node",
+  ".scheme-sub > *",
+  ".formula",
+  ".layer",
+  ".case-photo",
+  ".case-facts > *",
+  ".case-summary > *",
+  ".cfg",
+  ".demo-grid > *",
+  ".val-col > *",
+  ".lim-col > *",
+  ".conc-close",
+  ".q-inner > *",
+].join(", ");
+
+export function getRevealTargets(slide: HTMLElement | null) {
+  return slide ? Array.from(slide.querySelectorAll<HTMLElement>(REVEAL_SELECTOR)) : [];
+}
